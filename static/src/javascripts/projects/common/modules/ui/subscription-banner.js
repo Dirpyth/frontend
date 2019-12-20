@@ -59,13 +59,19 @@ const hideBannerInTheseRegions: ReaderRevenueRegion[] = [
     'united-states',
     'australia',
 ];
-const abTest =
-    isInABTestSynchronous(subscriptionsBannerNewYearCopyTest) ? {
-        abTest: {
-            name: subscriptionsBannerNewYearCopyTest.id,
-            variant: isInVariantSynchronous(subscriptionsBannerNewYearCopyTest, 'control') ? 'control' : 'variant',
-        }
-    } : {};
+const abTest = isInABTestSynchronous(subscriptionsBannerNewYearCopyTest)
+    ? {
+          abTest: {
+              name: subscriptionsBannerNewYearCopyTest.id,
+              variant: isInVariantSynchronous(
+                  subscriptionsBannerNewYearCopyTest,
+                  'control'
+              )
+                  ? 'control'
+                  : 'variant',
+          },
+      }
+    : {};
 
 const subscriptionUrl = addTrackingCodesToUrl({
     base: `${subscriptionHostname}/subscribe/digital`,
