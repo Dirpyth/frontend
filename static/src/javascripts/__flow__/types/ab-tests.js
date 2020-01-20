@@ -28,6 +28,7 @@ declare type EpicVariant = Variant & {
     template: EpicTemplate,
     classNames: string[],
     showTicker: boolean,
+    showReminder: boolean,
 
     buttonTemplate?: (primaryCta: EpicCta, secondaryCta?: EpicCta) => string,
     ctaText?: string,
@@ -105,6 +106,7 @@ declare type InitEpicABTestVariant = {
     copy?: AcquisitionsEpicTemplateCopy,
     classNames?: string[],
     showTicker?: boolean,
+    showReminder?: boolean,
     supportBaseURL?: string,
     backgroundImageUrl?: string,
     canRun?: () => boolean,

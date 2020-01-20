@@ -24,9 +24,12 @@
     }
     .epic-reminder__email-input {}
     .epic-reminder__email-help-text {
+        @include fs-textSans(4);
         display: block;
     }
     .epic-reminder__submit-button-wrapper {}
-    .epic-reminder__submit-button {}
+    .epic-reminder__submit-button {
+        @include fs-textSans(4);
+    }
     .epic-reminder__email-terms-and-conditions {}
 }

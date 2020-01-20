@@ -59,6 +59,7 @@ const controlEpicComponent = (
             epicClassNames: [],
             wrapperClass: '',
             showTicker: false,
+            showReminder: true,
         });
 
         const epicElement = $.create(rawEpic).get(0);

@@ -108,6 +108,7 @@ const controlTemplate: EpicTemplate = (
             : undefined,
         epicClassNames: variant.classNames,
         showTicker: variant.showTicker,
+        showReminder: variant.showReminder,
         backgroundImageUrl: variant.backgroundImageUrl,
     });
 
@@ -283,6 +284,7 @@ const makeEpicABTestVariant = (
         copy: initVariant.copy,
         classNames: initVariant.classNames || [],
         showTicker: initVariant.showTicker || false,
+        showReminder: initVariant.showReminder || false,
         backgroundImageUrl: initVariant.backgroundImageUrl,
         deploymentRules,
 
