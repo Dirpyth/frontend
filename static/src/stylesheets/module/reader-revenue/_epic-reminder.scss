@@ -1,0 +1,32 @@
+/*@include multiline(4, $brightness-86, bottom);*/
+
+
+.epic-reminder {
+    .epic-reminder__prompt {
+        width: 100%;
+        text-align: right;
+    }
+    .epic-reminder__prompt-text {
+        @include fs-textSans(5);
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .epic-reminder__signup {}
+    .epic-reminder__close-button {}
+    .epic-reminder__form-title {
+        @include fs-headline(3);
+        font-weight: bold;
+    }
+    .epic-reminder__email-label {
+        @include fs-textSans(5);
+        font-weight: bold;
+        display: block;
+    }
+    .epic-reminder__email-input {}
+    .epic-reminder__email-help-text {
+        display: block;
+    }
+    .epic-reminder__submit-button-wrapper {}
+    .epic-reminder__submit-button {}
+    .epic-reminder__email-terms-and-conditions {}
+}

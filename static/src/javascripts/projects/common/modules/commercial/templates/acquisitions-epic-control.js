@@ -1,6 +1,7 @@
 // @flow
 import { appendToLastElement } from 'lib/array-utils';
 import { acquisitionsEpicTickerTemplate } from 'common/modules/commercial/templates/acquisitions-epic-ticker';
+import {acquisitionsEpicReminderTemplate} from "common/modules/commercial/templates/acquisitions-epic-reminder";
 
 const buildFooter = (footer: string[]): string =>
     `<div class="contributions__epic-footer">
@@ -19,7 +20,8 @@ export const acquisitionsEpicControlTemplate = ({
     buttonTemplate,
     wrapperClass = '',
     showTicker = false,
-    backgroundImageUrl,
+    showReminder = true,
+    backgroundImageUrl
 }: {
     copy: AcquisitionsEpicTemplateCopy,
     componentName: string,
@@ -27,6 +29,7 @@ export const acquisitionsEpicControlTemplate = ({
     buttonTemplate?: string,
     wrapperClass?: string,
     showTicker: boolean,
+    showReminder: boolean,
     backgroundImageUrl?: string,
 }) => {
     const extraClasses = (backgroundImageUrl
@@ -38,8 +41,10 @@ export const acquisitionsEpicControlTemplate = ({
         <div class="${wrapperClass}">
             <div>
                 ${showTicker ? acquisitionsEpicTickerTemplate : ''}
-                
+
                 ${backgroundImageUrl ? buildImage(backgroundImageUrl) : ''}
+
+                 ${showReminder ? acquisitionsEpicReminderTemplate : ''}
 
                 <h2 class="contributions__title">
                     ${heading}
@@ -53,9 +58,9 @@ export const acquisitionsEpicControlTemplate = ({
                     .map(paragraph => `<p>${paragraph}</p>`)
                     .join('')}
             </div>
-    
+
             ${buttonTemplate || ''}
-            
+
             ${footer ? buildFooter(footer) : ''}
         </div>
     </div>`;
