@@ -36,24 +36,24 @@ function sendReminderEvent() {
     const createReminderEndpoint = isProd ?
         'https://contribution-reminders.support.guardianapis.com/remind-me' : 'https://contribution-reminders-code.support.guardianapis.com/remind-me';
 
-       return fetch(createReminderEndpoint, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                email: "joemgriffiths+150@gmail.com",
-                reminderDate: "2020-03-19",
-                isPreContribution: true
-            }),
-        }).then(r => r)
+    return fetch(createReminderEndpoint, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            email: "joemgriffiths+150@gmail.com",
+            reminderDate: "2020-03-19",
+            isPreContribution: true
+        }),
+    }).then(r => r)
 
-        //     .then((response) => {
-        //     if (response.ok) {
-        //         this.requestHasSucceeded();
-        //     } else {
-        //         this.requestHasFailed();
-        //         logException('Reminder sign up failed at the point of request');
-        //     }
-        // });
+    //     .then((response) => {
+    //     if (response.ok) {
+    //         this.requestHasSucceeded();
+    //     } else {
+    //         this.requestHasFailed();
+    //         logException('Reminder sign up failed at the point of request');
+    //     }
+    // });
 }
