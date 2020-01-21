@@ -22,14 +22,29 @@
         font-weight: bold;
         display: block;
     }
+    .epic-reminder__email-input-wrapper {
+        display: flex;
+    }
     .epic-reminder__email-input {}
     .epic-reminder__email-help-text {
         @include fs-textSans(4);
         display: block;
     }
-    .epic-reminder__submit-button-wrapper {}
+    .epic-reminder__submit-button-wrapper {
+        alignment: right;
+    }
     .epic-reminder__submit-button {
         @include fs-textSans(4);
+        margin-left: 10px;
+        font-weight: bold;
+        color: white;
+        background: #052962;
+        border-radius: 160px;
     }
-    .epic-reminder__email-terms-and-conditions {}
+
+    .epic-reminder__email-terms-and-conditions {
+        @include fs-textSans(3);
+        font-style: italic ;
+        alignment: left;
+    }
 }
