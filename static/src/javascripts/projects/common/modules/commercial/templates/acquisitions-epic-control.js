@@ -50,19 +50,23 @@ export const acquisitionsEpicControlTemplate = ({
                     ${heading}
                 </h2>
                 ${appendToLastElement(
-        paragraphs,
-        highlightedText
-            ? ` <strong><span class="contributions__highlight">${highlightedText}</span></strong>`
-            : ''
-    )
-        .map(paragraph => `<p>${paragraph}</p>`)
-        .join('')}
+                    paragraphs,
+                    highlightedText
+                        ? ` <strong><span class="contributions__highlight">${highlightedText}</span></strong>`
+                        : ''
+                )
+                    .map(paragraph => `<p>${paragraph}</p>`)
+                    .join('')}
             </div>
 
             ${buttonTemplate || ''}
 
             ${footer ? buildFooter(footer) : ''}
-            ${showReminder ? acquisitionsEpicReminderTemplate : acquisitionsEpicReminderTemplate}
+            ${
+                showReminder
+                    ? acquisitionsEpicReminderTemplate
+                    : acquisitionsEpicReminderTemplate
+            }
         </div>
     </div>`;
 };
