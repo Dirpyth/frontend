@@ -1,7 +1,7 @@
 // @flow
 import { appendToLastElement } from 'lib/array-utils';
 import { acquisitionsEpicTickerTemplate } from 'common/modules/commercial/templates/acquisitions-epic-ticker';
-import { acquisitionsEpicReminderTemplate } from "common/modules/commercial/templates/acquisitions-epic-reminder";
+import { acquisitionsEpicReminderTemplate } from 'common/modules/commercial/templates/acquisitions-epic-reminder';
 
 const buildFooter = (footer: string[]): string =>
     `<div class="contributions__epic-footer">
