@@ -430,9 +430,7 @@ const makeEpicABTestVariant = (
                                             initVariant.showReminder
                                         );
                                         if (initVariant.showReminder) {
-                                            initReminderEmailSignup(
-                                                '.js-epic-reminder'
-                                            );
+                                            initReminderEmailSignup();
                                         }
                                     });
                                 });
