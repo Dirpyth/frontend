@@ -1,4 +1,3 @@
-/*@include multiline(4, $brightness-86, bottom);*/
 
 
 .epic-reminder {
@@ -6,45 +5,72 @@
         width: 100%;
         text-align: right;
     }
+
     .epic-reminder__prompt-text {
         @include fs-textSans(5);
         font-weight: bold;
         cursor: pointer;
     }
-    .epic-reminder__signup {}
-    .epic-reminder__close-button {}
+
+    .epic-reminder__reveal-reminder {
+        display: none;
+    }
+
+    .epic-reminder__reveal-reminder:checked ~ .epic-reminder__signup {
+        display: block;
+    }
+
+    .epic-reminder__reveal-reminder:checked ~ .epic-reminder__prompt-label {
+        display: none;
+    }
+
+    .epic-reminder__signup {
+        @include multiline(4, $brightness-86, top);
+        display: none;
+    }
+
+    .epic-reminder__close-button {
+        padding-top: 15px;
+        float: right;
+    }
+
     .epic-reminder__form-title {
         @include fs-headline(3);
+        padding-top: 20px;
         font-weight: bold;
     }
+
     .epic-reminder__email-label {
         @include fs-textSans(5);
         font-weight: bold;
         display: block;
     }
+
     .epic-reminder__email-input-wrapper {
         display: flex;
     }
-    .epic-reminder__email-input {}
+
+    .epic-reminder__email-input {
+    }
+
     .epic-reminder__email-help-text {
         @include fs-textSans(4);
         display: block;
     }
+
     .epic-reminder__submit-button-wrapper {
         alignment: right;
     }
+
     .epic-reminder__submit-button {
-        @include fs-textSans(4);
         margin-left: 10px;
-        font-weight: bold;
         color: #ffffff;
         background: #052962;
-        border-radius: 160px;
     }
 
-    .epic-reminder__email-terms-and-conditions {
+    .epic-reminderemail-terms-and-conditions {
         @include fs-textSans(3);
-        font-style: italic ;
+        font-style: italic;
         alignment: left;
     }
 }

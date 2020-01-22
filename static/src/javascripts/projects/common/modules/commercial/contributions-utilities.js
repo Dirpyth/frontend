@@ -54,6 +54,7 @@ import {
 import { getControlEpicCopy } from 'common/modules/commercial/acquisitions-copy';
 import { initTicker } from 'common/modules/commercial/ticker';
 import { getArticleViewCountForWeeks } from 'common/modules/onward/history';
+import { initReminderEmailSignup } from 'common/modules/commercial/epic-reminder-email-signup';
 
 export type ReaderRevenueRegion =
     | 'united-kingdom'
@@ -424,6 +425,15 @@ const makeEpicABTestVariant = (
                                         if (initVariant.showTicker) {
                                             initTicker('.js-epic-ticker');
                                         }
+                                        console.log(
+                                            'flag:',
+                                            initVariant.showReminder
+                                        );
+                                        if (initVariant.showReminder) {
+                                            initReminderEmailSignup(
+                                                '.js-epic-reminder'
+                                            );
+                                        }
                                     });
                                 });
                             }
@@ -693,6 +703,7 @@ export const buildConfiguredEpicTestFromJson = (
                 `contributions__epic--${test.name}-${variant.name}`,
             ],
             showTicker: variant.showTicker,
+            showReminder: true, // Todo this needs to be loaded dynamically
             backgroundImageUrl: filterEmptyString(variant.backgroundImageUrl),
             // TODO - why are these fields at the variant level?
             deploymentRules,
