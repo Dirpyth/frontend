@@ -19,7 +19,7 @@ export const acquisitionsEpicReminderTemplate = `
 
             <form>
                 <label for="epic-reminder__email-input" class="epic-reminder__email-label">Email address</label>
-                <small id="epic-reminder__email-help-text" class="epic-reminder__email-help-text">Insert your email address here</small>
+                <small id="epic-reminder__email-help-text" class="epic-reminder__help-text"></small>
                <div class="epic-reminder__email-input-wrapper">
 
                  <input type="email" class="epic-reminder__email-input" id=epic-reminder__email-input" aria-describedby="epic-reminder__email-help-text">
